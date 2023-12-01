@@ -1,0 +1,11 @@
+version: "3"
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      - POSTGRES_DB=toastmaster
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=password
+    ports:
+      - '12345:5432'
+

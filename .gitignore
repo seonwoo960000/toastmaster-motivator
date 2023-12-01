@@ -1,0 +1,10 @@
+# frontend
+frontend/dist
+frontend/node_modules
+
+# backend
+backend/target
+backend/.env.release
+
+# common
+.idea
