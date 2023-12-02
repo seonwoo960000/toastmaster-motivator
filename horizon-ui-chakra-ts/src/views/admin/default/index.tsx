@@ -21,46 +21,24 @@
 */
 
 // Chakra imports
-import {
-  Avatar,
-  Box,
-  Flex,
-  FormLabel,
-  Icon,
-  Select,
-  SimpleGrid,
-  useColorModeValue,
-} from '@chakra-ui/react';
+import { Avatar, Box, SimpleGrid } from "@chakra-ui/react";
 // Assets
-import Usa from 'assets/img/dashboards/usa.png';
 // Custom components
-import MiniCalendar from 'components/calendar/MiniCalendar';
-import MiniStatistics from 'components/card/MiniStatistics';
-import IconBox from 'components/icons/IconBox';
-import {
-  MdAddTask,
-  MdAttachMoney,
-  MdBarChart,
-  MdFileCopy,
-} from 'react-icons/md';
-import CheckTable from 'views/admin/rtl/components/CheckTable';
-import ComplexTable from 'views/admin/default/components/ComplexTable';
-import DailyTraffic from 'views/admin/default/components/DailyTraffic';
-import PieCard from 'views/admin/default/components/PieCard';
-import Tasks from 'views/admin/default/components/Tasks';
-import TotalSpent from 'views/admin/default/components/TotalSpent';
-import WeeklyRevenue from 'views/admin/default/components/WeeklyRevenue';
-import tableDataCheck from 'views/admin/default/variables/tableDataCheck';
-import tableDataComplex from 'views/admin/default/variables/tableDataComplex';
-import moonsun from 'assets/img/avatars/moonsun.png';
-import michael from 'assets/img/avatars/michael.png';
-import dave from 'assets/img/avatars/dave.png';
-import naomi from 'assets/img/avatars/naomi.png';
+import MiniCalendar from "components/calendar/MiniCalendar";
+import MiniStatistics from "components/card/MiniStatistics";
+import ComplexTable from "views/admin/default/components/ComplexTable";
+import WeeklyPhotos from "views/admin/default/components/WeeklyPhotos";
+import { tableDataComplex } from "views/admin/default/variables/tableDataComplex";
+import moonsun from "assets/img/avatars/moonsun.png";
+import michael from "assets/img/avatars/michael.png";
+import dave from "assets/img/avatars/dave.png";
+import naomi from "assets/img/avatars/naomi.png";
+import miniCalendarEvents from "./variables/miniCalendarEvents";
+import React from "react";
+import MemberProgress from "./components/MemberProgress";
 
 export default function UserReports() {
   // Chakra Color Mode
-  const brandColor = useColorModeValue('brand.500', 'white');
-  const boxBg = useColorModeValue('secondaryGray.300', 'whiteAlpha.100');
   return (
     <Box pt={{ base: '130px', md: '80px', xl: '80px' }}>
       <SimpleGrid columns={{ base: 2, '2xl': 4 }} gap="20px" mb="20px">
@@ -114,20 +92,14 @@ export default function UserReports() {
         />
       </SimpleGrid>
 
-      <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap="20px" mb="20px">
-        <TotalSpent />
-        <WeeklyRevenue />
-      </SimpleGrid>
-      <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap="20px" mb="20px">
-        <CheckTable tableData={tableDataCheck} />
-        <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap="20px">
-          <DailyTraffic />
-          <PieCard />
-        </SimpleGrid>
-      </SimpleGrid>
-      <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap="20px" mb="20px">
+      <SimpleGrid columns={{ base: 2 }} gap="20px" mb="20px">
         <ComplexTable tableData={tableDataComplex} />
-        <MiniCalendar selectRange={false} events={[{ date: '2023-12-02', description: 'hello'}]}/>
+        <MiniCalendar selectRange={false} events={miniCalendarEvents} />
+      </SimpleGrid>
+
+      <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap="20px" mb="20px">
+        <WeeklyPhotos />
+        <MemberProgress />
       </SimpleGrid>
     </Box>
   );

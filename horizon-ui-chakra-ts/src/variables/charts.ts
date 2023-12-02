@@ -360,6 +360,17 @@ export const lineChartDataTotalSpent = [
 	}
 ];
 
+export const memberPreparedSpeechProgress = [
+	{
+		name: 'Prepared Speech',
+		data: [ 1, 0, 1, 0, 1, 0 ]
+	},
+	{
+		name: 'Table Topic Speech',
+		data: [ 2, 4, 2, 2, 1, 2 ]
+	}
+];
+
 export const lineChartOptionsTotalSpent: any = {
 	chart: {
 		toolbar: {

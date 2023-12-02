@@ -1,34 +1,41 @@
 type RowObj = {
-	name: string;
-	status: string;
-	date: string;
-	progress: number;
+  name: string;
+  result: typeof Result[keyof typeof Result];
+  date: string;
+  project: string;
 };
 
+const Result = {
+  DEFAULT: 'default',
+  WINNER: 'winner',
+} as const;
+
 const tableDataComplex: RowObj[] = [
-	{
-		name: 'Horizon UI PRO',
-		progress: 75.5,
-		status: 'Approved',
-		date: '12 Jan 2021'
-	},
-	{
-		name: 'Horizon UI Free',
-		progress: 25.5,
-		status: 'Disable',
-		date: '21 Feb 2021'
-	},
-	{
-		name: 'Weekly Update',
-		progress: 90,
-		status: 'Error',
-		date: '13 Mar 2021'
-	},
-	{
-		name: 'Marketplace',
-		progress: 50.5,
-		status: 'Approved',
-		date: '24 Oct 2022'
-	}
+  {
+    name: 'Choi',
+    result: Result.WINNER,
+    date: '2023-12-04',
+    project: 'Approved',
+  },
+  {
+    name: 'Ji Won',
+    result: Result.DEFAULT,
+    date: '2023-12-04',
+    project: 'Disable',
+  },
+  {
+    name: 'Seon Woo',
+    result: Result.WINNER,
+    date: '2023-11-27',
+    project: 'Error',
+  },
+  {
+    name: 'Cliff',
+    result: Result.DEFAULT,
+    date: '2023-11-27',
+    project: 'Approved',
+  },
 ];
-export default tableDataComplex;
+
+export { Result, tableDataComplex };
+export type { RowObj };
