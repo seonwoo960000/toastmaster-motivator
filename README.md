@@ -12,8 +12,8 @@ The main goal of this application is to provide a platform to motivate members o
 ## Features 
 - [ ] Social Incentives 
   - [ ] Leaderboard 
-  - [ ] Badges
 - [ ] Immediate Rewards
+  - [ ] Badges
 - [ ] Progress Monitoring
   - [ ] Weekly/Monthly/Daily Speech Progress 
   - [ ] Weekly/Monthly/Daily Role Progress
