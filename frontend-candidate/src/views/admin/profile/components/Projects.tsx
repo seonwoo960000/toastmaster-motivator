@@ -20,31 +20,30 @@ export default function Projects(props: { [x: string]: any }) {
 				All projects
 			</Text>
 			<Text color={textColorSecondary} fontSize='md' me='26px' mb='40px'>
-				Here you can find more details about your projects. Keep you user engaged by providing meaningful
-				information.
+				Here you can keep track of your projects.
 			</Text>
 			<Project
 				boxShadow={cardShadow}
 				mb='20px'
 				image={Project1}
-				ranking='1'
+				level='1'
 				link='#'
-				title='Technology behind the Blockchain'
+				title='Motivational Strategies'
 			/>
 			<Project
 				boxShadow={cardShadow}
 				mb='20px'
 				image={Project2}
-				ranking='2'
+				level='2'
 				link='#'
-				title='Greatest way to a good Economy'
+				title='Dynamic Leadership'
 			/>
 			<Project
 				boxShadow={cardShadow}
 				image={Project3}
-				ranking='3'
+				level='1'
 				link='#'
-				title='Most essential tips for Burnout'
+				title='Engaging Humor'
 			/>
 		</Card>
 	);

@@ -8,8 +8,8 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 // Custom components
-import Card from 'components/card/Card';
-import LineChart from 'components/charts/LineChart';
+import Card from '../../../../components/card/Card';
+import LineChart from '../../../../components/charts/LineChart';
 import { IoCheckmarkCircle } from 'react-icons/io5';
 import { MdBarChart, MdOutlineCalendarToday } from 'react-icons/md';
 // Assets
@@ -17,7 +17,8 @@ import { RiArrowUpSFill } from 'react-icons/ri';
 import {
   memberPreparedSpeechProgress,
   lineChartOptionsTotalSpent,
-} from 'variables/charts';
+} from '../../../../variables/charts';
+import * as React from "react";
 
 export default function MemberProgress(props: { [x: string]: any }) {
   const { ...rest } = props;
@@ -57,8 +58,18 @@ export default function MemberProgress(props: { [x: string]: any }) {
             color={textColorSecondary}
             me="4px"
           />
-          This month
+          2023-12
         </Button>
+      </Flex>
+      <Flex px="25px" mb="8px" justifyContent="space-between" align="center">
+        <Text
+          color={textColor}
+          fontSize="22px"
+          fontWeight="700"
+          lineHeight="100%"
+        >
+          Progress Monitoring
+        </Text>
       </Flex>
       <Box w="100%" h="100%">
         <LineChart

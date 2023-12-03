@@ -35,7 +35,7 @@ import dave from "assets/img/avatars/dave.png";
 import naomi from "assets/img/avatars/naomi.png";
 import miniCalendarEvents from "./variables/miniCalendarEvents";
 import React from "react";
-import MemberProgress from "./components/MemberProgress";
+import MemberProgress from "../profile/components/MemberProgress";
 
 export default function UserReports() {
   // Chakra Color Mode
@@ -99,7 +99,6 @@ export default function UserReports() {
 
       <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap="20px" mb="20px">
         <WeeklyPhotos />
-        <MemberProgress />
       </SimpleGrid>
     </Box>
   );
